@@ -1,0 +1,62 @@
+{
+  // Project name for the fitness application
+  "name": "fitlab",
+  // Indicates this is a private package, not meant to be published to npm
+  "private": true,
+  // Initial version number following semantic versioning
+  "version": "0.0.0",
+  // Specifies that this package uses ES modules
+  "type": "module",
+  
+  // NPM scripts for various development tasks
+  "scripts": {
+    // Start development server using Vite
+    "dev": "vite",
+    // Build production-ready code
+    "build": "vite build",
+    // Run ESLint for code quality checks
+    "lint": "eslint .",
+    // Preview production build locally
+    "preview": "vite preview"
+  },
+
+  // Production dependencies
+  "dependencies": {
+    // HTTP client for making API requests
+    "axios": "^1.8.1",
+    // Core React library
+    "react": "^19.0.0",
+    // React DOM for web applications
+    "react-dom": "^19.0.0",
+    // Routing library for React applications
+    "react-router-dom": "^7.2.0"
+  },
+
+  // Development dependencies
+  "devDependencies": {
+    // ESLint JavaScript configuration
+    "@eslint/js": "^9.21.0",
+    // TypeScript type definitions for React
+    "@types/react": "^19.0.10",
+    // TypeScript type definitions for ReactDOM
+    "@types/react-dom": "^19.0.4",
+    // Vite plugin for React support
+    "@vitejs/plugin-react": "^4.3.4",
+    // CSS vendor prefixing tool
+    "autoprefixer": "^10.4.14",
+    // Code linting tool
+    "eslint": "^9.21.0",
+    // ESLint plugin for React Hooks
+    "eslint-plugin-react-hooks": "^5.1.0",
+    // ESLint plugin for React Fast Refresh
+    "eslint-plugin-react-refresh": "^0.4.19",
+    // Global variables for ESLint
+    "globals": "^15.15.0",
+    // CSS transformation tool
+    "postcss": "^8.4.27",
+    // Utility-first CSS framework
+    "tailwindcss": "^3.3.3",
+    // Build tool and dev server
+    "vite": "^6.2.0"
+  }
+}

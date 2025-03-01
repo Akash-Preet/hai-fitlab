@@ -1,0 +1,51 @@
+{
+  // Package name for the fitness application API
+  "name": "fitlab-api",
+  // Current version of the application
+  "version": "1.0.0",
+  // Entry point of the application
+  "main": "index.js",
+  // Script commands for running tests and development server
+  "scripts": {
+    // Test command using Jest with environment variables and dotenv configuration
+    "test": "NODE_ENV=test node -r dotenv/config ./node_modules/.bin/jest --detectOpenHandles --forceExit",
+    // Development server start command
+    "dev": "node server.js"
+  },
+  // Keywords for package identification (empty in this case)
+  "keywords": [],
+  // Package author information (empty in this case)
+  "author": "",
+  // License type for the package
+  "license": "ISC",
+  // Package description (empty in this case)
+  "description": "",
+  // Production dependencies
+  "dependencies": {
+    // Password hashing library
+    "bcrypt": "^5.1.1",
+    // Alternative password hashing library
+    "bcryptjs": "^3.0.2",
+    // Cross-Origin Resource Sharing middleware
+    "cors": "^2.8.5",
+    // Environment variables management
+    "dotenv": "^16.4.7",
+    // Web application framework
+    "express": "^4.21.2",
+    // Data validation library
+    "joi": "^17.13.3",
+    // MongoDB object modeling tool
+    "mongoose": "^8.11.0"
+  },
+  // Development dependencies
+  "devDependencies": {
+    // TypeScript definitions for Jest
+    "@types/jest": "^29.5.14",
+    // Testing framework
+    "jest": "^29.7.0",
+    // In-memory MongoDB server for testing
+    "mongodb-memory-server": "^10.1.4",
+    // HTTP testing library
+    "supertest": "^7.0.0"
+  }
+}
