@@ -4,6 +4,76 @@ const Joi = require("joi");
 const bcrypt = require("bcryptjs");
 const FitUser = require("../models/FitUser");
 
+// Validation schema for login
+const loginSchema = Joi.object({
+  email: Joi.string().email().required().messages({
+    "string.email": "Please enter a valid email address",
+    "any.required": "Email is required",
+  }),
+  password: Joi.string().required().messages({
+    "any.required": "Password is required",
+  }),
+});
+
+// Login endpoint
+router.post("/login", async (req, res) => {
+  try {
+    // Validate request body
+    const { error, value } = loginSchema.validate(req.body, {
+      abortEarly: false,
+    });
+    if (error) {
+      const errors = error.details.map((detail) => ({
+        field: detail.path.join("."),
+        message: detail.message,
+      }));
+      return res.status(400).json({ errors });
+    }
+
+    // Find user by email
+    const user = await FitUser.findOne({ email: value.email });
+    if (!user) {
+      return res.status(401).json({
+        errors: [
+          {
+            field: "email",
+            message: "Invalid email or password",
+          },
+        ],
+      });
+    }
+
+    // Verify password
+    const validPassword = await bcrypt.compare(value.password, user.password);
+    if (!validPassword) {
+      return res.status(401).json({
+        errors: [
+          {
+            field: "password",
+            message: "Invalid email or password",
+          },
+        ],
+      });
+    }
+
+    // Return success response with user role
+    res.status(200).json({
+      message: "Login successful",
+      role: user.role,
+    });
+  } catch (err) {
+    console.error("Login error:", err);
+    res.status(500).json({
+      errors: [
+        {
+          field: "server",
+          message: "Internal server error occurred",
+        },
+      ],
+    });
+  }
+});
+
 // Validation schema for registration
 const registrationSchema = Joi.object({
   email: Joi.string().email().required().messages({
