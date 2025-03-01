@@ -1,0 +1,4 @@
+# Ignore the .hai directory and all its contents
+# This is typically used to exclude build artifacts, temporary files,
+# or configuration files specific to the .hai environment
+.hai/

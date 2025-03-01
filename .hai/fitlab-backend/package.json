@@ -1,0 +1,43 @@
+{
+  // Name of the Node.js project
+  "name": "todo-app-api",
+
+  // Version number following semantic versioning
+  "version": "1.0.0",
+
+  // Entry point of the application
+  "main": "index.js",
+
+  // NPM scripts for various commands
+  "scripts": {
+    // Default test script (placeholder)
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+  // Keywords for npm registry search (empty array)
+  "keywords": [],
+
+  // Author information (empty)
+  "author": "",
+
+  // License type
+  "license": "ISC",
+
+  // Project description (empty)
+  "description": "",
+
+  // Project dependencies with version numbers
+  "dependencies": {
+    // CORS middleware for handling Cross-Origin Resource Sharing
+    "cors": "^2.8.5",
+
+    // Environment variables management
+    "dotenv": "^16.4.7",
+
+    // Web application framework for Node.js
+    "express": "^4.21.2",
+
+    // MongoDB object modeling tool
+    "mongoose": "^8.11.0"
+  }
+}
