@@ -1,0 +1,4 @@
+{
+  "requirement": "Integrate a secure and reliable payment gateway to handle transactions for both trainees purchasing workouts and trainers receiving payouts. Payment data should adhere to industry security standards such as PCI-DSS compliance.",
+  "title": "Secure Payment Gateway"
+}

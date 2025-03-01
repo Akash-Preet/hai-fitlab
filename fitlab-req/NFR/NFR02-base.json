@@ -1,0 +1,4 @@
+{
+  "requirement": "The system should support up to 1 million users simultaneously during peak usage.",
+  "title": "High Scalability Support"
+}

@@ -1,0 +1,4 @@
+{
+  "requirement": "The UI should include a registration form where trainees can input their email, password, and basic fitness details such as age, weight, and height, with proper field validations and error handling.",
+  "title": "Trainee Registration Portal"
+}

@@ -1,0 +1,4 @@
+{
+  "requirement": "Allow trainees to add workouts to a cart and securely purchase them via an integrated payment gateway. \n\nScreens:\nA workout detail page with an 'Add to Cart' button, a cart summary page, and a checkout page. \n\nPersonas:\nTrainees who want to purchase and access specialized workouts.",
+  "title": "Workout Purchase System"
+}

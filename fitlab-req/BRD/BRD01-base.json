@@ -1,0 +1,5 @@
+{
+  "requirement": "Develop a user registration and authentication system allowing trainees to sign up using their email and password. The system should capture essential trainee details such as age, weight, height, and fitness goals to personalize the user experience. It should have a option to login or register as trainer.",
+  "title": "User Registration System",
+  "chatHistory": []
+}

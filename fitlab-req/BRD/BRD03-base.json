@@ -1,0 +1,4 @@
+{
+  "requirement": "Implement a cart and secure payment gateway system to allow trainees to add workouts to their cart and purchase them. Ensure support for multiple payment options, including credit card, debit card, and mobile wallets.",
+  "title": "Workout Purchase System"
+}

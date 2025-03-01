@@ -1,0 +1,4 @@
+{
+  "requirement": "The UI should provide a panel for trainers to upload workouts, incorporating fields for video tutorials, descriptions, difficulty levels, and pricing options with validations.",
+  "title": "Workout Upload Panel"
+}

@@ -1,0 +1,4 @@
+{
+  "requirement": "The payment system must process transactions in under 5 seconds while maintaining PCI-DSS compliance.",
+  "title": "Seamless Payment Gateway"
+}

@@ -1,0 +1,4 @@
+{
+  "requirement": "The app must implement secure authentication using standards like OAuth 2.0 to protect user accounts.",
+  "title": "Robust Authentication Mechanism"
+}

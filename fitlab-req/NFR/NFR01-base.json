@@ -1,0 +1,4 @@
+{
+  "requirement": "The app must respond to user interactions within 2 seconds under normal load conditions.",
+  "title": "Response Time Optimization"
+}

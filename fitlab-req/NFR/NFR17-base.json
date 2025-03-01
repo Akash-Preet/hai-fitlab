@@ -1,0 +1,4 @@
+{
+  "requirement": "The codebase must follow a modular architecture to allow easy maintenance, upgrades, and feature expansion.",
+  "title": "Modular Code Architecture"
+}

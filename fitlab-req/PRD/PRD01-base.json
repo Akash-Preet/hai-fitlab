@@ -1,0 +1,5 @@
+{
+  "requirement": "Enable users to register with email and password while capturing basic fitness details like age, weight, and height. button or link to navigate to trainer registration page. Provide error handling and validation for data input. \n\nScreens:\nA dedicated registration screen with input fields, error messages for invalid entries, and a confirmation screen for successful registration. \n\nPersonas:\nTrainees and trainers who need to create accounts to interact with the app.",
+  "title": "User Registration System",
+  "chatHistory": []
+}

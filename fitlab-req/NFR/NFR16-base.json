@@ -1,0 +1,4 @@
+{
+  "requirement": "Push notifications must have a guaranteed delivery success rate of 95% within 5 seconds of being triggered.",
+  "title": "Push Notification Reliability"
+}
