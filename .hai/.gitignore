@@ -57,6 +57,7 @@ web_modules/
 # Environment configuration files
 .env
 .env.development.local
+.env.test
 .env.test.local
 .env.production.local
 .env.local
