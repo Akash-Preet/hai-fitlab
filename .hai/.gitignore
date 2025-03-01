@@ -1,4 +1,98 @@
-# Ignore the .hai directory and all its contents
-# This is typically used to exclude build artifacts, temporary files,
-# or configuration files specific to the .hai environment
+# Git ignore configuration file for the fitness app project
+
+# Log files that should be ignored
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Node.js diagnostic reports
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Runtime process files
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Code coverage and testing directories
+lib-cov
+coverage
+*.lcov
+.nyc_output
+
+# Task runner and package manager files
+.grunt
+bower_components
+.lock-wscript
+
+# Build and compilation outputs
+build/Release
+
+# External dependencies
+node_modules/
+jspm_packages/
+web_modules/
+
+# TypeScript and build caches
+*.tsbuildinfo
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Development tool caches
+.npm
+.eslintcache
+.stylelintcache
+.node_repl_history
+
+# Package files
+*.tgz
+.yarn-integrity
+
+# Environment configuration files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# Build system caches
+.cache
+.parcel-cache
+
+# Framework specific build outputs
+.next
+out
+.nuxt
+dist
+.cache/
+
+# Static site generator outputs
+.vuepress/dist
+.temp
+.cache
+**/.vitepress/dist
+**/.vitepress/cache
+.docusaurus
+
+# Serverless framework directories
+.serverless/
+
+# Various cache and local files
+.fusebox/
+.dynamodb/
+.tern-port
+.vscode-test
+
+# Yarn specific files
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
 .hai/

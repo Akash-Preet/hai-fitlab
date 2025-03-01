@@ -1,15 +1,29 @@
-// Import the defineConfig function from Vite
-// This function is used to define and type-check the configuration
-import { defineConfig } from 'vite'
+// Vite configuration file for the fitness app
 
-// Import the React plugin for Vite
-// This plugin provides React specific features and optimizations
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
-// Export the Vite configuration
-// The configuration is wrapped in defineConfig for better TypeScript support
+/**
+ * Vite configuration object
+ * @see https://vite.dev/config/
+ */
 export default defineConfig({
-  // Configure plugins array with React plugin
-  // This enables React support including JSX transformation and HMR
+  // Configure plugins - React is the main plugin used
   plugins: [react()],
-})
+
+  // Server configuration
+  server: {
+    // Proxy configuration for API requests
+    proxy: {
+      // All requests to /api will be proxied
+      "/api": {
+        // Target backend server URL
+        target: "http://localhost:5005",
+        // Enables origin changes in the host header
+        changeOrigin: true,
+        // Disables SSL certificate validation
+        secure: false,
+      },
+    },
+  },
+});
