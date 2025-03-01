@@ -17,6 +17,7 @@ const SearchBar = () => {
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
   const [noResults, setNoResults] = useState(false);
+  const [error, setError] = useState("");
   const searchRef = useRef(null);
 
   useEffect(() => {
@@ -45,7 +46,11 @@ const SearchBar = () => {
   }, [searchTerm]);
 
   const handleSearch = (term) => {
-    if (!term.trim()) {
+    setError("");
+    const trimmedTerm = term.trim();
+
+    if (!trimmedTerm) {
+      setError("Please enter a search term");
       return;
     }
 
@@ -122,8 +127,15 @@ const SearchBar = () => {
           <div className="mt-4 text-center text-gray-600">Searching...</div>
         )}
 
+        {/* Error message */}
+        {error && (
+          <div className="mt-4 text-center text-red-600 font-medium">
+            {error}
+          </div>
+        )}
+
         {/* No results message */}
-        {noResults && !isSearching && (
+        {noResults && !isSearching && !error && (
           <div className="mt-4 text-center text-gray-600">
             No workouts found for "{searchTerm}". Try a different goal.
           </div>
