@@ -1,8 +1,28 @@
-import { useLocation, Navigate } from "react-router-dom";
+import { useLocation, Navigate, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const Confirmation = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const { role } = location.state || {};
+  const [countdown, setCountdown] = useState(5);
+
+  useEffect(() => {
+    if (role === "trainee") {
+      const timer = setInterval(() => {
+        setCountdown((prev) => prev - 1);
+      }, 1000);
+
+      const redirect = setTimeout(() => {
+        navigate("/search");
+      }, 5000);
+
+      return () => {
+        clearInterval(timer);
+        clearTimeout(redirect);
+      };
+    }
+  }, [role, navigate]);
 
   if (!role) {
     return <Navigate to="/" replace />;
@@ -33,6 +53,11 @@ const Confirmation = () => {
             <p className="mt-2 text-lg text-gray-600">
               Welcome, {role.charAt(0).toUpperCase() + role.slice(1)}
             </p>
+            {role === "trainee" && (
+              <p className="mt-4 text-sm text-gray-500">
+                Redirecting to workout search in {countdown} seconds...
+              </p>
+            )}
           </div>
         </div>
       </div>
